@@ -32,6 +32,25 @@ class Solver {
 					}
 				}
 			}
+			int rowSquare = 0;
+			while(rowSquare < in.getDimensions()) {
+				int columnSquare = 0;
+				while(columnSquare < in.getDimensions()) {
+					int squareCounter = 0;
+					for(int a = rowSquare; a<rowSquare+3; a++) {
+						for(int b = columnSquare; b<columnSquare+3; b++) {
+							if(in.getValue(a,b) == i) {
+								squareCounter++;
+							}
+							if(squareCounter > 1) {
+								return false;
+							}
+						}
+					}
+					columnSquare+=3;
+				}
+				rowSquare+=3;
+			}
 		}
 		return true;
 	}
