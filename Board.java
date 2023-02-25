@@ -1,8 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
-
-
 class Board {
 
 	private int[][] board;
@@ -55,6 +53,7 @@ class Board {
 			counter++;
 		}
 	}
+
 
 	//Divide into Quadrants
 	public String toString() {
