@@ -36,13 +36,13 @@ class Solver {
 
 	private static boolean checkValid(Board in, int row, int column, int num) {
 		//Checks for duplicates in spesified row
-		for(int i = 0; i<=in.getDimensions()-1; i++) {
+		for(int i = 0; i<in.getDimensions(); i++) {
 			if(in.getValue(row,i) == num) {
 				return false;
 			}
 		}
 		//Checks for duplicates in spesified column
-		for(int l = 0; l<in.getDimensions()-1; l++) {
+		for(int l = 0; l<in.getDimensions(); l++) {
 			if(in.getValue(l, column) == num) {
 				return false;
 			}
