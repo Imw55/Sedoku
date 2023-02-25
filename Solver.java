@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 
 class Solver {
 
-	public static boolean solve(Board unsolved, int row, int column) {
+	private static boolean solve(Board unsolved, int row, int column) {
 		if(row == unsolved.getDimensions()-1 && column == unsolved.getDimensions()) {
 			return true;
 		}
@@ -26,7 +26,7 @@ class Solver {
 	}
 
 
-	public static boolean checkValid(Board in, int row, int column, int num) {
+	private static boolean checkValid(Board in, int row, int column, int num) {
 		int squaresPerRow = in.getDimensions()/3;
 		for(int i = 0; i<=in.getDimensions()-1; i++) {
 			if(in.getValue(row,i) == num) {
@@ -50,7 +50,7 @@ class Solver {
 		return true;
 	}
 
-	public static boolean checkSolvable(Board in) {
+	private static boolean checkSolvable(Board in) {
 		int numSquare = in.getDimensions()/3;
 		for(int i = 1; i<10; i++) {
 			for(int l = 0; l<in.getDimensions(); l++) {
