@@ -82,9 +82,5 @@ class Board {
 		return this.dimension;
 	}
 
-	public static void main(String[] args) throws FileNotFoundException{
-		Board a = new Board(args[0]);
-		System.out.println(a);
-	}
 
 }
